@@ -29,7 +29,7 @@ struct PlacesListView: View {
                         List {
                             ForEach(viewModel.places) { place in
                                 NavigationLink(destination: PlaceDetailView(viewModel: PlaceDetailsViewModel(place: place, service: placesService))) {
-                                    PlacesRowView(place: place)
+                                    PlaceListItemView(place: place)
                                 }.padding()
                             }
                         }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// View used to show an individual place's details, such as name, address, rating, and open status (open/closed)
 struct PlaceDetailView: View {
     @ObservedObject var viewModel: PlaceDetailsViewModel
     
@@ -16,16 +17,17 @@ struct PlaceDetailView: View {
             VStack(alignment: .leading, spacing: 10) {
                 
                 HStack {
-                    Text(viewModel.place.name)
+                    Text(viewModel.name)
                         .font(.title3)
                         .padding(.top, 20)
                         .padding(.leading, 20)
                     
                     Spacer()
                     
-                    if let rating = viewModel.details?.rating {
+                    if let rating = viewModel.rating,
+                       let color = viewModel.ratingColor {
                         Capsule()
-                            .fill(Color(viewModel.details?.ratingColor ?? UIColor.white))
+                            .fill(color)
                             .overlay(
                                 Text(String(rating))
                                     .font(.subheadline)
@@ -38,7 +40,7 @@ struct PlaceDetailView: View {
                     }
                 }
                 
-                Text(viewModel.place.address)
+                Text(viewModel.address)
                     .font(.subheadline)
                     .foregroundColor(Color.gray)
                     .padding(.leading, 20)
@@ -46,8 +48,8 @@ struct PlaceDetailView: View {
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 10) {
-                        ForEach(viewModel.place.categoryImages, id: \.self) { categoryImageUrl in
-                            
+                        ForEach(viewModel.categoryImages, id: \.self) { categoryImageUrl in
+
                             AsyncImage(url: URL(string: categoryImageUrl)) { image in
                                 image.resizable()
                             } placeholder: {
@@ -61,8 +63,9 @@ struct PlaceDetailView: View {
                 .padding(.leading, 20)
                 .padding(.bottom, 10)
                 
-                if let open = viewModel.details?.open {
-                    Text(open ? "OPEN" : "CLOSED")
+                if let open = viewModel.open,
+                    let openClosedText = viewModel.openingStatus {
+                    Text(openClosedText)
                         .font(.caption)
                         .fontWeight(.bold)
                         .foregroundColor(open ? Color.green : Color.red)
@@ -70,7 +73,7 @@ struct PlaceDetailView: View {
                         .padding(.bottom, 10)
                 }
                 
-                if let description = viewModel.details?.description, !description.isEmpty {
+                if let description = viewModel.description, !description.isEmpty {
                     Text(description).padding(.leading, 20)
                 }
                 

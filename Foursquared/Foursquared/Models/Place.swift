@@ -28,6 +28,6 @@ struct Place: Identifiable {
     /// The distance (in metres) of the place from the user's location
     let distance: Int
     
-    /// List of
+    /// List of category images 
     let categoryImages: [String]
 }

@@ -8,19 +8,26 @@
 import CoreLocation
 import SwiftUI
 
-@MainActor
-/// View Model associated with the Place List view. This ViewModel handle the location updates and communicates
+
+/// View Model associated with the Place List view.
+/// This ViewModel provides methods to fetch places near a user baed on their location
+///
+/// It also handles the location updates and communicates
 /// the changes in location or user permission to locations to the View
+///
+@MainActor
 class PlacesListViewModel: NSObject, ObservableObject {
     
+    // MARK: - Published Properties
     @Published var places = [Place]()
     @Published var isLoading: Bool = false
     
-    var location: CLLocationCoordinate2D?
-    
+    // MARK: - Private Properties
+    private var location: CLLocationCoordinate2D?
     private let locationManager = CLLocationManager()
-    var placesService: PlacesServiceProtocol!
+    private var placesService: PlacesServiceProtocol!
     
+    // MARK: - Initialiser
     init(placesService: PlacesServiceProtocol) {
         super.init()
         self.placesService = placesService
@@ -28,6 +35,8 @@ class PlacesListViewModel: NSObject, ObservableObject {
         self.locationManager.requestWhenInUseAuthorization()
     }
     
+    
+    // MARK: - Public functions
     
     /// Method used to fetch places within a certain radius of the user's location.
     /// - Parameter radius: Radius value to fetch the places within, defaults to 10 if none provided
@@ -50,11 +59,14 @@ class PlacesListViewModel: NSObject, ObservableObject {
     }
 }
 
-/// Extension used for conforming to the location delegate, to receieve updates on location and location based permission changes
+// MARK: - CLLocationManagerDelegate Delegate
+
+/// Extension used for conforming to the location delegate, to receive updates on location and location based permission changes
 extension PlacesListViewModel: CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
         
+        // When a user grants permission to allow location permission to the app, we want to fetch the nearby places
         if status == .authorizedWhenInUse || status == .authorizedAlways {
             guard let location = manager.location?.coordinate else { return }
             self.location = location
@@ -63,6 +75,8 @@ extension PlacesListViewModel: CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        // When a user's location changes, we want to fetch nearby places again
         guard let location = manager.location?.coordinate else { return }
         self.location = location
         fetchPlaces()

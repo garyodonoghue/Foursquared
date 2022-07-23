@@ -8,7 +8,8 @@
 import SwiftUI
 import CoreLocation
 
-struct PlacesRowView: View {
+/// View used to show some summary information about a place. Used in a `List` when showing a list of places
+struct PlaceListItemView: View {
     
     var place: Place
     
@@ -37,6 +38,6 @@ struct PlacesRowView: View {
 
 struct PlacesRow_Previews: PreviewProvider {
     static var previews: some View {
-        PlacesRowView(place: Place(apiId: "123ABC", name: "Test location", location: CLLocationCoordinate2D(latitude: 12.0, longitude: 123.23), address: "Da Costakade, Amsterdam", distance: 150, categoryImages: []))
+        PlaceListItemView(place: Place(apiId: "123ABC", name: "Test location", location: CLLocationCoordinate2D(latitude: 12.0, longitude: 123.23), address: "Da Costakade, Amsterdam", distance: 150, categoryImages: []))
     }
 }

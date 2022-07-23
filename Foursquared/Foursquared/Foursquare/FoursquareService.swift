@@ -7,6 +7,7 @@
 
 import CoreLocation
 
+/// Error enum used 
 enum ServiceError: Error {
     case badURL
     case serverError(String? = nil)
@@ -29,12 +30,20 @@ class FoursquarePlacesService: PlacesServiceProtocol {
         
         do {
             guard let request = authorizedPlacesRequest(forPath: placeId,
-                                                                  withParams: params) else { return .failure(.badURL) }
+                                                        withParams: params) else { return .failure(.badURL) }
             
             let (data, _) = try await URLSession.shared.data(for: request)
             let response = try JSONDecoder().decode(FoursquareDetailResponse.self, from: data)
+            
+            var rating: Rating?
+            if let responseRating = response.rating,
+               let ratingColor = response.ratingColor,
+               let hexVal = ratingColor.hexString {
+                rating = Rating(ratingValue: responseRating, hexColour: hexVal)
+            }
+            
             let placeDetail = PlaceDetail(open: response.hours?.open_now,
-                                          rating: response.rating,
+                                          rating: rating,
                                           description: response.description)
             return .success(placeDetail)
         } catch {
