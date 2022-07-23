@@ -11,6 +11,7 @@
 		0D68739C288B352A0026C410 /* PlaceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D68739B288B352A0026C410 /* PlaceDetailsViewModel.swift */; };
 		0D68739E288B3A000026C410 /* FoursquareDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D68739D288B3A000026C410 /* FoursquareDetailResponse.swift */; };
 		0D6873A0288B46A00026C410 /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D68739F288B46A00026C410 /* PlaceDetail.swift */; };
+		0DCC0925288C659C00789103 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCC0924288C659C00789103 /* HTTPClient.swift */; };
 		0DCDD47C288C4A9F00A06684 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD47B288C4A9F00A06684 /* Constants.swift */; };
 		0DCDD47F288C52AC00A06684 /* UIColor+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD47E288C52AC00A06684 /* UIColor+hexString.swift */; };
 		0DF1810428873F6900A0F5D8 /* FoursquaredApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1810328873F6900A0F5D8 /* FoursquaredApp.swift */; };
@@ -30,6 +31,7 @@
 		0D68739B288B352A0026C410 /* PlaceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewModel.swift; sourceTree = "<group>"; };
 		0D68739D288B3A000026C410 /* FoursquareDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareDetailResponse.swift; sourceTree = "<group>"; };
 		0D68739F288B46A00026C410 /* PlaceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetail.swift; sourceTree = "<group>"; };
+		0DCC0924288C659C00789103 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		0DCDD47B288C4A9F00A06684 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0DCDD47E288C52AC00A06684 /* UIColor+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
 		0DF1810028873F6900A0F5D8 /* Foursquared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foursquared.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,6 +58,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DCC0922288C656000789103 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				0DF18118288743D000A0F5D8 /* PlacesService.swift */,
+				0DCC0924288C659C00789103 /* HTTPClient.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
 		0DCDD47A288C4A9500A06684 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,11 +102,11 @@
 		0DF1810228873F6900A0F5D8 /* Foursquared */ = {
 			isa = PBXGroup;
 			children = (
+				0DCC0922288C656000789103 /* API */,
 				0DCDD47D288C529800A06684 /* Extensions */,
 				0DCDD47A288C4A9500A06684 /* Utils */,
 				0DF181252887E89C00A0F5D8 /* Views */,
 				0DF1812028874E5E00A0F5D8 /* Foursquare */,
-				0DF18117288743D000A0F5D8 /* Services */,
 				0DF1811D2887441D00A0F5D8 /* Models */,
 				0DF18119288743D000A0F5D8 /* ViewModels */,
 				0DF1810328873F6900A0F5D8 /* FoursquaredApp.swift */,
@@ -111,14 +122,6 @@
 				0DF1810A28873F6A00A0F5D8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		0DF18117288743D000A0F5D8 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-				0DF18118288743D000A0F5D8 /* PlacesService.swift */,
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 		0DF18119288743D000A0F5D8 /* ViewModels */ = {
@@ -240,6 +243,7 @@
 				0DCDD47C288C4A9F00A06684 /* Constants.swift in Sources */,
 				0DF1812428874ED500A0F5D8 /* FoursquareService.swift in Sources */,
 				0DF1810628873F6900A0F5D8 /* PlacesListView.swift in Sources */,
+				0DCC0925288C659C00789103 /* HTTPClient.swift in Sources */,
 				0D68739E288B3A000026C410 /* FoursquareDetailResponse.swift in Sources */,
 				0DF1810428873F6900A0F5D8 /* FoursquaredApp.swift in Sources */,
 				0DF1811F2887442400A0F5D8 /* Place.swift in Sources */,

@@ -18,6 +18,11 @@ enum ServiceError: Error {
 /// This is to allow any other downstream API to be used, and swapped out instead of Foursquare, as long as it conforms to the `PlacesServiceProtocol` then the app will continue to work
 class FoursquarePlacesService: PlacesServiceProtocol {
     
+    var urlSession: MyUrlSessionProtocol!
+    
+    init(urlSession: MyUrlSessionProtocol = URLSession.shared) {
+        self.urlSession = urlSession
+    }
     
     /// Get specific details about a specific place
     /// - Parameter placeId: Id used to represent the place. In this case it will be an `fsq_id` used to represent a place in the Fourasquare API
@@ -32,7 +37,7 @@ class FoursquarePlacesService: PlacesServiceProtocol {
             guard let request = authorizedPlacesRequest(forPath: placeId,
                                                         withParams: params) else { return .failure(.badURL) }
             
-            let (data, _) = try await URLSession.shared.data(for: request)
+            let (data, _) = try await urlSession.data(for: request, delegate: nil)
             let response = try JSONDecoder().decode(FoursquareDetailResponse.self, from: data)
             
             var rating: Rating?
@@ -61,7 +66,7 @@ class FoursquarePlacesService: PlacesServiceProtocol {
         
         do {
             guard let request = authorizedPlacesRequest(forPath: "\(placeId)/photos") else { return .failure(.badURL) }
-            let (data, _) = try await URLSession.shared.data(for: request)
+            let (data, _) = try await urlSession.data(for: request, delegate: nil)
             let response = try JSONDecoder().decode([FourSquarePhotoItem].self, from: data)
             
             imageUrls = response.map { photoItem in
@@ -90,7 +95,7 @@ class FoursquarePlacesService: PlacesServiceProtocol {
         
         do {
             guard let request = authorizedPlacesRequest(forPath: "search", withParams: params) else { return .failure(.badURL) }
-            let (data, _) = try await URLSession.shared.data(for: request)
+            let (data, _) = try await urlSession.data(for: request, delegate: nil)
             let response = try JSONDecoder().decode(FoursquareSearchResponse.self, from: data)
             
             // convert foursquare specific types to app types
