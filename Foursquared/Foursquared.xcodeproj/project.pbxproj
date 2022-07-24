@@ -11,7 +11,19 @@
 		0D68739C288B352A0026C410 /* PlaceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D68739B288B352A0026C410 /* PlaceDetailsViewModel.swift */; };
 		0D68739E288B3A000026C410 /* FoursquareDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D68739D288B3A000026C410 /* FoursquareDetailResponse.swift */; };
 		0D6873A0288B46A00026C410 /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D68739F288B46A00026C410 /* PlaceDetail.swift */; };
-		0DCC0925288C659C00789103 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCC0924288C659C00789103 /* HTTPClient.swift */; };
+		0DCC0925288C659C00789103 /* FoursquaredSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCC0924288C659C00789103 /* FoursquaredSessionProtocol.swift */; };
+		0DCC0935288C6B7300789103 /* FoursquarePlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1812328874ED500A0F5D8 /* FoursquarePlacesService.swift */; };
+		0DCC0938288C6D3400789103 /* PlaceDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCC0937288C6D3400789103 /* PlaceDetailsViewModelTests.swift */; };
+		0DCC0939288C6D5D00789103 /* PlaceDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D68739B288B352A0026C410 /* PlaceDetailsViewModel.swift */; };
+		0DCC093A288C6D7400789103 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1811E2887442400A0F5D8 /* Place.swift */; };
+		0DCC093B288C6DBF00789103 /* PlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF18118288743D000A0F5D8 /* PlacesService.swift */; };
+		0DCC093C288C6F2100789103 /* PlaceDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D68739F288B46A00026C410 /* PlaceDetail.swift */; };
+		0DCC093D288C6F9500789103 /* FoursquaredSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCC0924288C659C00789103 /* FoursquaredSessionProtocol.swift */; };
+		0DCC093E288C6F9C00789103 /* UIColor+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD47E288C52AC00A06684 /* UIColor+hexString.swift */; };
+		0DCC093F288C6F9F00789103 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD47B288C4A9F00A06684 /* Constants.swift */; };
+		0DCC0943288C6FAA00789103 /* FoursquareSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1812128874E9F00A0F5D8 /* FoursquareSearchResponse.swift */; };
+		0DCC0944288C6FAE00789103 /* FoursquareDetailResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D68739D288B3A000026C410 /* FoursquareDetailResponse.swift */; };
+		0DCC0945288C6FB400789103 /* PlacesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1811A288743D000A0F5D8 /* PlacesListViewModel.swift */; };
 		0DCDD47C288C4A9F00A06684 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD47B288C4A9F00A06684 /* Constants.swift */; };
 		0DCDD47F288C52AC00A06684 /* UIColor+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD47E288C52AC00A06684 /* UIColor+hexString.swift */; };
 		0DF1810428873F6900A0F5D8 /* FoursquaredApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1810328873F6900A0F5D8 /* FoursquaredApp.swift */; };
@@ -22,16 +34,28 @@
 		0DF1811C288743D000A0F5D8 /* PlacesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1811A288743D000A0F5D8 /* PlacesListViewModel.swift */; };
 		0DF1811F2887442400A0F5D8 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1811E2887442400A0F5D8 /* Place.swift */; };
 		0DF1812228874E9F00A0F5D8 /* FoursquareSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1812128874E9F00A0F5D8 /* FoursquareSearchResponse.swift */; };
-		0DF1812428874ED500A0F5D8 /* FoursquareService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1812328874ED500A0F5D8 /* FoursquareService.swift */; };
+		0DF1812428874ED500A0F5D8 /* FoursquarePlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1812328874ED500A0F5D8 /* FoursquarePlacesService.swift */; };
 		0DF181272887E8AA00A0F5D8 /* PlaceListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF181262887E8AA00A0F5D8 /* PlaceListItemView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0DCC092E288C6AA900789103 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DF180F828873F6800A0F5D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0DF180FF28873F6800A0F5D8;
+			remoteInfo = Foursquared;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0D687399288B27A60026C410 /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
 		0D68739B288B352A0026C410 /* PlaceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewModel.swift; sourceTree = "<group>"; };
 		0D68739D288B3A000026C410 /* FoursquareDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareDetailResponse.swift; sourceTree = "<group>"; };
 		0D68739F288B46A00026C410 /* PlaceDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetail.swift; sourceTree = "<group>"; };
-		0DCC0924288C659C00789103 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		0DCC0924288C659C00789103 /* FoursquaredSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquaredSessionProtocol.swift; sourceTree = "<group>"; };
+		0DCC092A288C6AA900789103 /* FoursquaredTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoursquaredTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DCC0937288C6D3400789103 /* PlaceDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		0DCDD47B288C4A9F00A06684 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0DCDD47E288C52AC00A06684 /* UIColor+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
 		0DF1810028873F6900A0F5D8 /* Foursquared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foursquared.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,11 +67,18 @@
 		0DF1811A288743D000A0F5D8 /* PlacesListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesListViewModel.swift; sourceTree = "<group>"; };
 		0DF1811E2887442400A0F5D8 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		0DF1812128874E9F00A0F5D8 /* FoursquareSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareSearchResponse.swift; sourceTree = "<group>"; };
-		0DF1812328874ED500A0F5D8 /* FoursquareService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareService.swift; sourceTree = "<group>"; };
+		0DF1812328874ED500A0F5D8 /* FoursquarePlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesService.swift; sourceTree = "<group>"; };
 		0DF181262887E8AA00A0F5D8 /* PlaceListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0DCC0927288C6AA900789103 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DF180FD28873F6800A0F5D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -62,9 +93,25 @@
 			isa = PBXGroup;
 			children = (
 				0DF18118288743D000A0F5D8 /* PlacesService.swift */,
-				0DCC0924288C659C00789103 /* HTTPClient.swift */,
+				0DCC0924288C659C00789103 /* FoursquaredSessionProtocol.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		0DCC092B288C6AA900789103 /* FoursquaredTests */ = {
+			isa = PBXGroup;
+			children = (
+				0DCC0936288C6D2600789103 /* ViewModels */,
+			);
+			path = FoursquaredTests;
+			sourceTree = "<group>";
+		};
+		0DCC0936288C6D2600789103 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				0DCC0937288C6D3400789103 /* PlaceDetailsViewModelTests.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		0DCDD47A288C4A9500A06684 /* Utils */ = {
@@ -83,11 +130,20 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		0DECECC9288D625D00443FB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0DF180F728873F6800A0F5D8 = {
 			isa = PBXGroup;
 			children = (
 				0DF1810228873F6900A0F5D8 /* Foursquared */,
+				0DCC092B288C6AA900789103 /* FoursquaredTests */,
 				0DF1810128873F6900A0F5D8 /* Products */,
+				0DECECC9288D625D00443FB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -95,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				0DF1810028873F6900A0F5D8 /* Foursquared.app */,
+				0DCC092A288C6AA900789103 /* FoursquaredTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,7 +203,7 @@
 			isa = PBXGroup;
 			children = (
 				0DF1812128874E9F00A0F5D8 /* FoursquareSearchResponse.swift */,
-				0DF1812328874ED500A0F5D8 /* FoursquareService.swift */,
+				0DF1812328874ED500A0F5D8 /* FoursquarePlacesService.swift */,
 				0D68739D288B3A000026C410 /* FoursquareDetailResponse.swift */,
 			);
 			path = Foursquare;
@@ -165,6 +222,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0DCC0929288C6AA900789103 /* FoursquaredTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DCC0930288C6AA900789103 /* Build configuration list for PBXNativeTarget "FoursquaredTests" */;
+			buildPhases = (
+				0DCC0926288C6AA900789103 /* Sources */,
+				0DCC0927288C6AA900789103 /* Frameworks */,
+				0DCC0928288C6AA900789103 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0DCC092F288C6AA900789103 /* PBXTargetDependency */,
+			);
+			name = FoursquaredTests;
+			packageProductDependencies = (
+			);
+			productName = FoursquaredTests;
+			productReference = 0DCC092A288C6AA900789103 /* FoursquaredTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		0DF180FF28873F6800A0F5D8 /* Foursquared */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DF1810E28873F6A00A0F5D8 /* Build configuration list for PBXNativeTarget "Foursquared" */;
@@ -178,6 +255,8 @@
 			dependencies = (
 			);
 			name = Foursquared;
+			packageProductDependencies = (
+			);
 			productName = Foursquared;
 			productReference = 0DF1810028873F6900A0F5D8 /* Foursquared.app */;
 			productType = "com.apple.product-type.application";
@@ -192,6 +271,10 @@
 				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
+					0DCC0929288C6AA900789103 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = 0DF180FF28873F6800A0F5D8;
+					};
 					0DF180FF28873F6800A0F5D8 = {
 						CreatedOnToolsVersion = 13.4.1;
 					};
@@ -206,16 +289,26 @@
 				Base,
 			);
 			mainGroup = 0DF180F728873F6800A0F5D8;
+			packageReferences = (
+			);
 			productRefGroup = 0DF1810128873F6900A0F5D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				0DF180FF28873F6800A0F5D8 /* Foursquared */,
+				0DCC0929288C6AA900789103 /* FoursquaredTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0DCC0928288C6AA900789103 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DF180FE28873F6800A0F5D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -228,6 +321,25 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0DCC0926288C6AA900789103 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DCC093E288C6F9C00789103 /* UIColor+hexString.swift in Sources */,
+				0DCC093B288C6DBF00789103 /* PlacesService.swift in Sources */,
+				0DCC0935288C6B7300789103 /* FoursquarePlacesService.swift in Sources */,
+				0DCC0939288C6D5D00789103 /* PlaceDetailsViewModel.swift in Sources */,
+				0DCC0945288C6FB400789103 /* PlacesListViewModel.swift in Sources */,
+				0DCC093A288C6D7400789103 /* Place.swift in Sources */,
+				0DCC0943288C6FAA00789103 /* FoursquareSearchResponse.swift in Sources */,
+				0DCC093F288C6F9F00789103 /* Constants.swift in Sources */,
+				0DCC0944288C6FAE00789103 /* FoursquareDetailResponse.swift in Sources */,
+				0DCC093D288C6F9500789103 /* FoursquaredSessionProtocol.swift in Sources */,
+				0DCC093C288C6F2100789103 /* PlaceDetail.swift in Sources */,
+				0DCC0938288C6D3400789103 /* PlaceDetailsViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DF180FC28873F6800A0F5D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -241,9 +353,9 @@
 				0D68739A288B27A60026C410 /* PlaceDetailView.swift in Sources */,
 				0DF1812228874E9F00A0F5D8 /* FoursquareSearchResponse.swift in Sources */,
 				0DCDD47C288C4A9F00A06684 /* Constants.swift in Sources */,
-				0DF1812428874ED500A0F5D8 /* FoursquareService.swift in Sources */,
+				0DF1812428874ED500A0F5D8 /* FoursquarePlacesService.swift in Sources */,
 				0DF1810628873F6900A0F5D8 /* PlacesListView.swift in Sources */,
-				0DCC0925288C659C00789103 /* HTTPClient.swift in Sources */,
+				0DCC0925288C659C00789103 /* FoursquaredSessionProtocol.swift in Sources */,
 				0D68739E288B3A000026C410 /* FoursquareDetailResponse.swift in Sources */,
 				0DF1810428873F6900A0F5D8 /* FoursquaredApp.swift in Sources */,
 				0DF1811F2887442400A0F5D8 /* Place.swift in Sources */,
@@ -252,7 +364,51 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		0DCC092F288C6AA900789103 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0DF180FF28873F6800A0F5D8 /* Foursquared */;
+			targetProxy = 0DCC092E288C6AA900789103 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		0DCC0931288C6AA900789103 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N9DA3D479M;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dacosta.foursquared.FoursquaredTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Foursquared.app/Foursquared";
+			};
+			name = Debug;
+		};
+		0DCC0932288C6AA900789103 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = N9DA3D479M;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dacosta.foursquared.FoursquaredTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Foursquared.app/Foursquared";
+			};
+			name = Release;
+		};
 		0DF1810C28873F6A00A0F5D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -430,6 +586,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0DCC0930288C6AA900789103 /* Build configuration list for PBXNativeTarget "FoursquaredTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0DCC0931288C6AA900789103 /* Debug */,
+				0DCC0932288C6AA900789103 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0DF180FB28873F6800A0F5D8 /* Build configuration list for PBXProject "Foursquared" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

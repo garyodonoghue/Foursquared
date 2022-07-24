@@ -18,9 +18,9 @@ enum ServiceError: Error {
 /// This is to allow any other downstream API to be used, and swapped out instead of Foursquare, as long as it conforms to the `PlacesServiceProtocol` then the app will continue to work
 class FoursquarePlacesService: PlacesServiceProtocol {
     
-    var urlSession: MyUrlSessionProtocol!
+    var urlSession: FoursquaredSessionProtocol!
     
-    init(urlSession: MyUrlSessionProtocol = URLSession.shared) {
+    init(urlSession: FoursquaredSessionProtocol = URLSession.shared) {
         self.urlSession = urlSession
     }
     
