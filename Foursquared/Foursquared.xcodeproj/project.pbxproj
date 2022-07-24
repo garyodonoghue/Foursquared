@@ -154,14 +154,6 @@
 			path = Foursquare;
 			sourceTree = "<group>";
 		};
-		0DECECDC288D6D4500443FB8 /* Foursquare */ = {
-			isa = PBXGroup;
-			children = (
-				0DECECDD288D6D5C00443FB8 /* FoursquarePlacesServiceTests.swift */,
-			);
-			path = Foursquare;
-			sourceTree = "<group>";
-		};
 		0DF180F728873F6800A0F5D8 = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +269,7 @@
 				0DCC0926288C6AA900789103 /* Sources */,
 				0DCC0927288C6AA900789103 /* Frameworks */,
 				0DCC0928288C6AA900789103 /* Resources */,
+				E0A8B9E43733DE125F62F7B5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -296,7 +289,6 @@
 				0DF180FC28873F6800A0F5D8 /* Sources */,
 				0DF180FD28873F6800A0F5D8 /* Frameworks */,
 				0DF180FE28873F6800A0F5D8 /* Resources */,
-				AAD1DDB2750084A83D5C8FD8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -427,21 +419,21 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		AAD1DDB2750084A83D5C8FD8 /* [CP] Embed Pods Frameworks */ = {
+		E0A8B9E43733DE125F62F7B5 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Foursquared/Pods-Foursquared-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FoursquaredTests/Pods-FoursquaredTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Foursquared/Pods-Foursquared-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-FoursquaredTests/Pods-FoursquaredTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Foursquared/Pods-Foursquared-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FoursquaredTests/Pods-FoursquaredTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
