@@ -19,3 +19,5 @@ to the View/ViewModel classes, as long as that implementation conformed still to
 - Due to time constraints, there is very limited error specific UI code. i.e service errors are just printed to console, whereas an error dialog would have been nicer
 - The `CLLocationManagerDelegate` logic in `PlacesListViewModel` is quite crude. If a user changes their location, it will fire a new request to fetch nearby places, if a person is moving a lot this could be quite a lot of resources used, maybe there should be logic here to only make requests when a certain distance threshold has been crossed, i.e. 100m or so, or cache a slightly larger set of places than is actually within the target radius, and use this to 'lazily load' new places without making new API requests
  
+
+![Demo](demo.gif)
