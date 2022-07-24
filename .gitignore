@@ -94,3 +94,4 @@ iOSInjectionProject/
 
 # Caches
 **/*.xcodeproj/MockingbirdCache/
+Foursquared/Pods/*

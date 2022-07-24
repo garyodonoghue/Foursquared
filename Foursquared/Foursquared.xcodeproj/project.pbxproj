@@ -26,6 +26,8 @@
 		0DCC0945288C6FB400789103 /* PlacesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1811A288743D000A0F5D8 /* PlacesListViewModel.swift */; };
 		0DCDD47C288C4A9F00A06684 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD47B288C4A9F00A06684 /* Constants.swift */; };
 		0DCDD47F288C52AC00A06684 /* UIColor+hexString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCDD47E288C52AC00A06684 /* UIColor+hexString.swift */; };
+		0DECECDB288D6BE400443FB8 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECECDA288D6BE400443FB8 /* GeneratedMocks.swift */; };
+		0DECECDE288D6D5D00443FB8 /* FoursquarePlacesServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DECECDD288D6D5C00443FB8 /* FoursquarePlacesServiceTests.swift */; };
 		0DF1810428873F6900A0F5D8 /* FoursquaredApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1810328873F6900A0F5D8 /* FoursquaredApp.swift */; };
 		0DF1810628873F6900A0F5D8 /* PlacesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1810528873F6900A0F5D8 /* PlacesListView.swift */; };
 		0DF1810828873F6A00A0F5D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DF1810728873F6A00A0F5D8 /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 		0DF1812228874E9F00A0F5D8 /* FoursquareSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1812128874E9F00A0F5D8 /* FoursquareSearchResponse.swift */; };
 		0DF1812428874ED500A0F5D8 /* FoursquarePlacesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF1812328874ED500A0F5D8 /* FoursquarePlacesService.swift */; };
 		0DF181272887E8AA00A0F5D8 /* PlaceListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DF181262887E8AA00A0F5D8 /* PlaceListItemView.swift */; };
+		2215FB5D790E5C96D9FDA310 /* Pods_Foursquared.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94368030C0E6B425A8DEB342 /* Pods_Foursquared.framework */; };
+		2DF1BFDE6E722542AE004BD1 /* Pods_FoursquaredTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017AC502F070E13A7498B3ED /* Pods_FoursquaredTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		017AC502F070E13A7498B3ED /* Pods_FoursquaredTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoursquaredTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D687399288B27A60026C410 /* PlaceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailView.swift; sourceTree = "<group>"; };
 		0D68739B288B352A0026C410 /* PlaceDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewModel.swift; sourceTree = "<group>"; };
 		0D68739D288B3A000026C410 /* FoursquareDetailResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareDetailResponse.swift; sourceTree = "<group>"; };
@@ -58,6 +63,8 @@
 		0DCC0937288C6D3400789103 /* PlaceDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewModelTests.swift; sourceTree = "<group>"; };
 		0DCDD47B288C4A9F00A06684 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0DCDD47E288C52AC00A06684 /* UIColor+hexString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+hexString.swift"; sourceTree = "<group>"; };
+		0DECECDA288D6BE400443FB8 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
+		0DECECDD288D6D5C00443FB8 /* FoursquarePlacesServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesServiceTests.swift; sourceTree = "<group>"; };
 		0DF1810028873F6900A0F5D8 /* Foursquared.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Foursquared.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DF1810328873F6900A0F5D8 /* FoursquaredApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquaredApp.swift; sourceTree = "<group>"; };
 		0DF1810528873F6900A0F5D8 /* PlacesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesListView.swift; sourceTree = "<group>"; };
@@ -69,6 +76,11 @@
 		0DF1812128874E9F00A0F5D8 /* FoursquareSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquareSearchResponse.swift; sourceTree = "<group>"; };
 		0DF1812328874ED500A0F5D8 /* FoursquarePlacesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoursquarePlacesService.swift; sourceTree = "<group>"; };
 		0DF181262887E8AA00A0F5D8 /* PlaceListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListItemView.swift; sourceTree = "<group>"; };
+		6EA7E5BC40AF9DFC3DC09750 /* Pods-Foursquared.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquared.debug.xcconfig"; path = "Target Support Files/Pods-Foursquared/Pods-Foursquared.debug.xcconfig"; sourceTree = "<group>"; };
+		7BE782715BA3433C140CB8EE /* Pods-FoursquaredTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquaredTests.release.xcconfig"; path = "Target Support Files/Pods-FoursquaredTests/Pods-FoursquaredTests.release.xcconfig"; sourceTree = "<group>"; };
+		94368030C0E6B425A8DEB342 /* Pods_Foursquared.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Foursquared.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8D4571C6F3D09AE247209F6 /* Pods-Foursquared.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Foursquared.release.xcconfig"; path = "Target Support Files/Pods-Foursquared/Pods-Foursquared.release.xcconfig"; sourceTree = "<group>"; };
+		C81D6EEC6EC246668B6C7BFF /* Pods-FoursquaredTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoursquaredTests.debug.xcconfig"; path = "Target Support Files/Pods-FoursquaredTests/Pods-FoursquaredTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF1BFDE6E722542AE004BD1 /* Pods_FoursquaredTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2215FB5D790E5C96D9FDA310 /* Pods_Foursquared.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,6 +115,8 @@
 		0DCC092B288C6AA900789103 /* FoursquaredTests */ = {
 			isa = PBXGroup;
 			children = (
+				0DECECDC288D6D4500443FB8 /* Foursquare */,
+				0DECECDA288D6BE400443FB8 /* GeneratedMocks.swift */,
 				0DCC0936288C6D2600789103 /* ViewModels */,
 			);
 			path = FoursquaredTests;
@@ -130,11 +146,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		0DECECC9288D625D00443FB8 /* Frameworks */ = {
+		0DECECDC288D6D4500443FB8 /* Foursquare */ = {
 			isa = PBXGroup;
 			children = (
+				0DECECDD288D6D5C00443FB8 /* FoursquarePlacesServiceTests.swift */,
 			);
-			name = Frameworks;
+			path = Foursquare;
 			sourceTree = "<group>";
 		};
 		0DF180F728873F6800A0F5D8 = {
@@ -143,7 +160,8 @@
 				0DF1810228873F6900A0F5D8 /* Foursquared */,
 				0DCC092B288C6AA900789103 /* FoursquaredTests */,
 				0DF1810128873F6900A0F5D8 /* Products */,
-				0DECECC9288D625D00443FB8 /* Frameworks */,
+				2B6463F307FB146ECDEA45FD /* Pods */,
+				B3D2091BB877D31E7A3D4143 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -219,6 +237,26 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2B6463F307FB146ECDEA45FD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6EA7E5BC40AF9DFC3DC09750 /* Pods-Foursquared.debug.xcconfig */,
+				B8D4571C6F3D09AE247209F6 /* Pods-Foursquared.release.xcconfig */,
+				C81D6EEC6EC246668B6C7BFF /* Pods-FoursquaredTests.debug.xcconfig */,
+				7BE782715BA3433C140CB8EE /* Pods-FoursquaredTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B3D2091BB877D31E7A3D4143 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94368030C0E6B425A8DEB342 /* Pods_Foursquared.framework */,
+				017AC502F070E13A7498B3ED /* Pods_FoursquaredTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -226,6 +264,8 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DCC0930288C6AA900789103 /* Build configuration list for PBXNativeTarget "FoursquaredTests" */;
 			buildPhases = (
+				07396D3FA2C4B82328729B96 /* [CP] Check Pods Manifest.lock */,
+				0DECECD9288D6B4200443FB8 /* Cuckoo Mocks */,
 				0DCC0926288C6AA900789103 /* Sources */,
 				0DCC0927288C6AA900789103 /* Frameworks */,
 				0DCC0928288C6AA900789103 /* Resources */,
@@ -236,8 +276,6 @@
 				0DCC092F288C6AA900789103 /* PBXTargetDependency */,
 			);
 			name = FoursquaredTests;
-			packageProductDependencies = (
-			);
 			productName = FoursquaredTests;
 			productReference = 0DCC092A288C6AA900789103 /* FoursquaredTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -246,17 +284,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DF1810E28873F6A00A0F5D8 /* Build configuration list for PBXNativeTarget "Foursquared" */;
 			buildPhases = (
+				13CF65B1253635D8566C4726 /* [CP] Check Pods Manifest.lock */,
 				0DF180FC28873F6800A0F5D8 /* Sources */,
 				0DF180FD28873F6800A0F5D8 /* Frameworks */,
 				0DF180FE28873F6800A0F5D8 /* Resources */,
+				AAD1DDB2750084A83D5C8FD8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Foursquared;
-			packageProductDependencies = (
-			);
 			productName = Foursquared;
 			productReference = 0DF1810028873F6900A0F5D8 /* Foursquared.app */;
 			productType = "com.apple.product-type.application";
@@ -289,8 +327,6 @@
 				Base,
 			);
 			mainGroup = 0DF180F728873F6800A0F5D8;
-			packageReferences = (
-			);
 			productRefGroup = 0DF1810128873F6900A0F5D8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -320,6 +356,88 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		07396D3FA2C4B82328729B96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FoursquaredTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0DECECD9288D6B4200443FB8 /* Cuckoo Mocks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Cuckoo Mocks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n# Type a script or drag a script file from your workspace to insert its path.\nif [ $ACTION == \"indexbuild\" ]; then\n  echo \"Not running Cuckoo generator during indexing.\"\n  exit 0 \nfi\n\n# Skip for preview builds\nif [ \"${ENABLE_PREVIEWS}\" = \"YES\" ]; then\n  echo \"Not running Cuckoo generator during preview builds.\"\n  exit 0\nfi\n\n# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"${INPUT_DIR}/API/PlacesService.swift\" \\\n\"${INPUT_DIR}/API/FoursquaredSessionProtocol.swift\"\n";
+		};
+		13CF65B1253635D8566C4726 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Foursquared-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AAD1DDB2750084A83D5C8FD8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Foursquared/Pods-Foursquared-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Foursquared/Pods-Foursquared-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Foursquared/Pods-Foursquared-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0DCC0926288C6AA900789103 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -327,6 +445,7 @@
 			files = (
 				0DCC093E288C6F9C00789103 /* UIColor+hexString.swift in Sources */,
 				0DCC093B288C6DBF00789103 /* PlacesService.swift in Sources */,
+				0DECECDE288D6D5D00443FB8 /* FoursquarePlacesServiceTests.swift in Sources */,
 				0DCC0935288C6B7300789103 /* FoursquarePlacesService.swift in Sources */,
 				0DCC0939288C6D5D00789103 /* PlaceDetailsViewModel.swift in Sources */,
 				0DCC0945288C6FB400789103 /* PlacesListViewModel.swift in Sources */,
@@ -334,6 +453,7 @@
 				0DCC0943288C6FAA00789103 /* FoursquareSearchResponse.swift in Sources */,
 				0DCC093F288C6F9F00789103 /* Constants.swift in Sources */,
 				0DCC0944288C6FAE00789103 /* FoursquareDetailResponse.swift in Sources */,
+				0DECECDB288D6BE400443FB8 /* GeneratedMocks.swift in Sources */,
 				0DCC093D288C6F9500789103 /* FoursquaredSessionProtocol.swift in Sources */,
 				0DCC093C288C6F2100789103 /* PlaceDetail.swift in Sources */,
 				0DCC0938288C6D3400789103 /* PlaceDetailsViewModelTests.swift in Sources */,
@@ -375,6 +495,7 @@
 /* Begin XCBuildConfiguration section */
 		0DCC0931288C6AA900789103 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C81D6EEC6EC246668B6C7BFF /* Pods-FoursquaredTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -393,6 +514,7 @@
 		};
 		0DCC0932288C6AA900789103 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BE782715BA3433C140CB8EE /* Pods-FoursquaredTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -525,6 +647,7 @@
 		};
 		0DF1810F28873F6A00A0F5D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6EA7E5BC40AF9DFC3DC09750 /* Pods-Foursquared.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -555,6 +678,7 @@
 		};
 		0DF1811028873F6A00A0F5D8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8D4571C6F3D09AE247209F6 /* Pods-Foursquared.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
