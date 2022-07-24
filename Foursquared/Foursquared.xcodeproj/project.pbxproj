@@ -154,6 +154,14 @@
 			path = Foursquare;
 			sourceTree = "<group>";
 		};
+		0DECECDC288D6D4500443FB8 /* Foursquare */ = {
+			isa = PBXGroup;
+			children = (
+				0DECECDD288D6D5C00443FB8 /* FoursquarePlacesServiceTests.swift */,
+			);
+			path = Foursquare;
+			sourceTree = "<group>";
+		};
 		0DF180F728873F6800A0F5D8 = {
 			isa = PBXGroup;
 			children = (
