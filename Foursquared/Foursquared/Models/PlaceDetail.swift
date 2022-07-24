@@ -10,7 +10,7 @@ import Foundation
 /**
   Model used to store detailed information about a place
  */
-struct PlaceDetail: Equatable {
+struct PlaceDetail {
     
     /// Whether a place is currently open or not, or nil if not known/not available
     let open: Bool?
@@ -20,10 +20,6 @@ struct PlaceDetail: Equatable {
     
     /// The description of a place
     let description: String?
-    
-    static func == (lhs: PlaceDetail, rhs: PlaceDetail) -> Bool {
-        lhs.description == rhs.description
-    }
 }
 
 /**

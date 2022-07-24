@@ -1,4 +1,4 @@
-// MARK: - Mocks generated from file: Foursquared/API/FoursquaredSessionProtocol.swift at 2022-07-24 14:13:43 +0000
+// MARK: - Mocks generated from file: Foursquared/API/FoursquaredSessionProtocol.swift at 2022-07-24 15:17:18 +0000
 
 //
 //  HTTPClient.swift
@@ -131,7 +131,7 @@ import Foundation
 
 
 
-// MARK: - Mocks generated from file: Foursquared/API/PlacesService.swift at 2022-07-24 14:13:43 +0000
+// MARK: - Mocks generated from file: Foursquared/API/PlacesService.swift at 2022-07-24 15:17:18 +0000
 
 //
 //  PlacesService.swift

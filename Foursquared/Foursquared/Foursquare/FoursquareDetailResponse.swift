@@ -13,7 +13,7 @@ struct FoursquareDetailResponse: Codable {
     let hours: FoursquareHoursObject?
     let description: String?
     
-    /// Propertty used to represent the Foursquare rating on a red to green scale of of bad to good
+    /// Property used to represent the Foursquare rating on a red to green scale of of bad to good
     /// See the [Foursquare response fields documentation](https://developer.foursquare.com/reference/response-fields)
     var ratingColor: String? {
         guard let rating = rating else {
@@ -21,23 +21,23 @@ struct FoursquareDetailResponse: Codable {
         }
 
         if rating == 0 {
-          return "D1D6D8"
+          return "#D1D6D8"
         } else if rating <= 4.0 {
-            return "E6092C"
+            return "#E6092C"
         } else if rating <= 5.0 {
-            return "FF6701"
+            return "#FF6701"
         } else if rating <= 6.0 {
-            return "FF9600"
+            return "#FF9600"
         } else if rating <= 7.0 {
-            return "FFC800"
+            return "#FFC800"
         } else if rating <= 8.0 {
-            return "C5DE35"
+            return "#C5DE35"
         } else if rating <= 9.0 {
-            return "73CF42"
+            return "#73CF42"
         } else if rating > 9.0 {
-            return "00B551"
+            return "#00B551"
         } else {
-            return "FFFFFF"
+            return "#FFFFFF"
         }
     }
 }
