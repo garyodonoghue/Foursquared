@@ -36,7 +36,7 @@ struct FoursquareDetailResponse: Codable {
         } else if rating <= 9.0 {
             return #colorLiteral(red: 0.4509803922, green: 0.8117647059, blue: 0.2588235294, alpha: 1)
         } else if rating > 9.0 {
-            return #colorLiteral(red: 0.4509803922, green: 0.8117647059, blue: 0.2588235294, alpha: 1)
+            return #colorLiteral(red: 0, green: 0.7098039216, blue: 0.3176470588, alpha: 1)
         } else {
             return #colorLiteral(red: 0.9411764706, green: 0.9529411765, blue: 0.9647058824, alpha: 1)
         }

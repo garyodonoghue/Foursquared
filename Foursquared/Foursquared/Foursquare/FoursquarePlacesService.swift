@@ -24,39 +24,6 @@ class FoursquarePlacesService: PlacesServiceProtocol {
         self.urlSession = urlSession
     }
     
-    /// Get specific details about a specific place
-    /// - Parameter placeId: Id used to represent the place. In this case it will be an `fsq_id` used to represent a place in the Fourasquare API
-    /// - Returns: A Result containing either a `PlaceDetail` object in the case of a successful call, or a `ServiceError` in the case of some failure
-    func getPlaceDetails(for placeId: String) async -> Result<PlaceDetail, ServiceError> {
-        
-        let params: [String: String] = [
-            "fields": "rating,hours,description"
-        ]
-        
-        do {
-            guard let request = authorizedPlacesRequest(forPath: placeId,
-                                                        withParams: params) else { return .failure(.badURL) }
-            
-            let (data, _) = try await urlSession.data(for: request, delegate: nil)
-            let response = try JSONDecoder().decode(FoursquareDetailResponse.self, from: data)
-            
-            var rating: Rating?
-            if let responseRating = response.rating,
-               let ratingColor = response.ratingColor,
-               let hexVal = ratingColor.hexString {
-                rating = Rating(ratingValue: responseRating, hexColour: hexVal)
-            }
-            
-            let placeDetail = PlaceDetail(open: response.hours?.open_now,
-                                          rating: rating,
-                                          description: response.description)
-            return .success(placeDetail)
-        } catch {
-            return .failure(.serverError(error.localizedDescription))
-        }
-    }
-    
-    
     /// Get images for a specific place
     /// - Parameter placeId: Id used to represent the place. In this case it will be an `fsq_id` used to represent a place in the Fourasquare API
     /// - Returns: A `Result` containing either a collection of image URLs represented as `String`s in the case of a successful call, or a `ServiceError` in the case of some failure
@@ -114,6 +81,37 @@ class FoursquarePlacesService: PlacesServiceProtocol {
         return .success(places)
     }
     
+    /// Get specific details about a specific place
+    /// - Parameter placeId: Id used to represent the place. In this case it will be an `fsq_id` used to represent a place in the Fourasquare API
+    /// - Returns: A Result containing either a `PlaceDetail` object in the case of a successful call, or a `ServiceError` in the case of some failure
+    func getPlaceDetails(for placeId: String) async -> Result<PlaceDetail, ServiceError> {
+        
+        let params: [String: String] = [
+            "fields": "rating,hours,description"
+        ]
+        
+        do {
+            guard let request = authorizedPlacesRequest(forPath: placeId,
+                                                        withParams: params) else { return .failure(.badURL) }
+            
+            let (data, _) = try await urlSession.data(for: request, delegate: nil)
+            let response = try JSONDecoder().decode(FoursquareDetailResponse.self, from: data)
+            
+            var rating: Rating?
+            if let responseRating = response.rating,
+               let ratingColor = response.ratingColor,
+               let hexVal = ratingColor.hexString {
+                rating = Rating(ratingValue: responseRating, hexColour: hexVal)
+            }
+            
+            let placeDetail = PlaceDetail(open: response.hours?.open_now,
+                                          rating: rating,
+                                          description: response.description)
+            return .success(placeDetail)
+        } catch {
+            return .failure(.serverError(error.localizedDescription))
+        }
+    }
     
     /// Generate a URL request to call the [Foursquare Places
     /// API](https://developer.foursquare.com/reference/place-search)
