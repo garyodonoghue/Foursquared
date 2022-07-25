@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import MapKit
 
 /// View showing the list of places around a user's location
 struct PlacesListView: View {
